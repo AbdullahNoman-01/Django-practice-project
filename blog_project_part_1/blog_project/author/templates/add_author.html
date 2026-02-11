@@ -1,0 +1,10 @@
+{% extends "base.html" %} 
+{% load crispy_forms_tags %} 
+{% block content %}
+<form class = "w-50 mx-auto mt-3 " method="post">
+   {% csrf_token %} 
+   <h3>Add Author Page</h3>
+   {{form | crispy}}
+   <button class="btn btn-warning">Submit</button>
+</form>
+{% endblock %}
